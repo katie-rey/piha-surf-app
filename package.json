@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "start": "node server",
+    "start:backend": "node index.js",
     "test": "jest",
     "test:watch": "jest --noStackTrace --watchAll",
     "dev": "run-p dev:client dev:server",
@@ -39,6 +40,9 @@
   },
   "dependencies": {
     "@vscode/sqlite3": "^5.0.7",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "knex": "^1.0.2",
     "pg": "^8.5.1",
