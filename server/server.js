@@ -22,12 +22,16 @@ server.get('/weather', (req, res) => {
       key: process.env.WEATHER_KEY,
       format: 'json',
       tp: '24',
+      tide: 'yes',
     },
+
+    // body: JSON.stringify(options),
   }
 
   axios
     .request(options)
     .then((response) => {
+      // const newOptions = JSON.stringify(response.data)
       res.json(response.data)
     })
     .catch((error) => {
