@@ -13,7 +13,7 @@ export default function ButtonAppBar() {
   return (
     <div className="header">
       <div className="menu"></div>
-      <div className="menu"></div>
+      <div className="menu">Piha Surf Report</div>
       <div className="menu"></div>
     </div>
 

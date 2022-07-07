@@ -23,12 +23,20 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover; */
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   min-height: 8vh;
+  /* min-width: 100vh; */
   background-color: rgba(3, 23, 34, 0.9);
   margin-bottom: 5px;
+  /* position: fixed;
+  top: 0;
+} */
 }
 
 p {
@@ -106,7 +114,7 @@ p {
   margin-top: 2.25vh;
   /* background-color: rgba(0, 255, 255, 0.4); */
   /* background-color: rgba(234, 220, 238, 0.6); */
-  background-color: rgba(3, 23, 34, 0.6);
+  background-color: rgba(3, 23, 34, 1);
   border-radius: 15px;
 }
 .surf-row-container {
@@ -115,7 +123,8 @@ p {
   justify-content: space-around;
 }
 
-.surf-row {
+.surf-row,
+.menu {
   color: white;
   font-size: 1.2rem;
   margin: 25px;
@@ -138,11 +147,16 @@ p {
   margin-right: 2rem;
   font-size: 1.2rem;
 }
+
+.fawind {
+  font-size: 1.5rem;
+}
+
 .img-thumbnail {
   width: 2rem;
   height: 2rem;
   background-size: cover;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
   color: white;
 }
 
@@ -151,6 +165,9 @@ p {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 22px;
 }
 
 .tide-row {
@@ -172,3 +189,38 @@ p {
   justify-content: space-around;
   padding-right: 10px;
 }
+
+.row-forecast-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: rgba(0, 255, 255, 0.4); */
+  /* background-color: rgba(18, 60, 74, 0.6); */
+  /* background-color: rgba(234, 220, 238, 0.6); */
+  background-color: rgba(3, 23, 34, 1);
+  border-radius: 15px;
+  /* padding: 15px; */
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+}
+
+.forecast-row {
+  color: white;
+  font-size: 1.2rem;
+  margin: 25px;
+}
+.forecast-row-middle {
+  color: white;
+  font-size: 1.2rem;
+  margin: 25px 30px 25px 25px;
+  padding-right: 1.2rem;
+}
+.forecast-row-small {
+  color: white;
+  font-size: 1rem;
+  margin: 25px;
+}
+
+/* .forecast-row-text {
+  font-size: 1.2rem;
+} */

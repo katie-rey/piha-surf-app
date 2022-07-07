@@ -7,6 +7,9 @@ import {
   FaWater,
   FaArrowLeft,
   FaCloudRain,
+  FaCloudShowersHeavy,
+  FaCloudSun,
+  FaCloudSunRain,
 } from 'react-icons/fa'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -25,6 +28,9 @@ function Home() {
   const [nowTemp, setNowTemp] = useState(null)
   const [minTemp, setMinTemp] = useState(null)
   const [desc, setDesc] = useState(null)
+  const [desc1, setDesc1] = useState(null)
+  const [desc2, setDesc2] = useState(null)
+  const [desc3, setDesc3] = useState(null)
   const [windSpeed, setWindSpeed] = useState(null)
   const [windDir, setWindDir] = useState(null)
   const [swellHeight, setSwellHeight] = useState(null)
@@ -49,6 +55,9 @@ function Home() {
         setTemp(response.data.data.weather[0].maxtempC)
         setMinTemp(response.data.data.weather[0].mintempC)
         setDesc(response.data.data.weather[0].hourly[0].weatherDesc[0].value)
+        setDesc1(response.data.data.weather[1].hourly[0].weatherDesc[0].value)
+        setDesc2(response.data.data.weather[1].hourly[0].swellHeight_m)
+        setDesc3(response.data.data.weather[1].hourly[0].swellDir16Point)
         setNowTemp(response.data.data.weather[0].hourly[0].tempC)
         setWindSpeed(response.data.data.weather[0].hourly[0].windspeedKmph)
         setWindDir(response.data.data.weather[0].hourly[0].winddir16Point)
@@ -76,34 +85,24 @@ function Home() {
       })
   }, [])
 
-  // console.log(typeof date)
-  // console.log(date)
-  // console.log(temp)
-  // console.log(minTemp)
-  // console.log(desc)
-
-  // const today = Date.now()
-  // console.log(today)
-  // const newDate = today.toDateString()
-  // console.log(newDate)
-
   const d1 = new Date().toDateString()
   console.log(d1)
 
-  // const d = new Date(date)
-  // const d2 = d.slice(0, 11)
-  // const { date } = data
-  // console.log(d)
-  // const newD = d.stringify
-  // console.log(typeof d)
+  console.log(typeof desc)
+  const descString = JSON.stringify(desc)
+  console.log(typeof descString)
 
-  // const newData = JSON.parse(data)
-  // console.log(newData)
-
-  // const newData = data.weather
-  // console
-  //   .log(newData)
-  // const newData = { data }
+  function weatherIcon() {
+    if (descString.includes('rain')) {
+      return <FaCloudShowersHeavy />
+    } else if (descString.includes('sun' && !'cloud')) {
+      return <FaSun />
+    } else if (descString.includes('cloudy' && 'sun')) {
+      return <FaCloudSun />
+    } else if (descString.includes('cloudy' && !'sun')) {
+      return <FaCloud />
+    } else return <FaCloud />
+  }
 
   return (
     <>
@@ -119,7 +118,7 @@ function Home() {
                   <FaMapMarkerAlt /> Piha{' '}
                 </div>
                 <div className="row-large">
-                  <FaCloud />
+                  {weatherIcon()}&nbsp;
                   {nowTemp}℃
                 </div>
                 <div className="row">
@@ -141,11 +140,11 @@ function Home() {
       <div className="container">
         <div className="row-container">
           <div className="surf-row">
-            <FaWind />
+            <FaWind className="fawind" />
           </div>
           <div className="surf-row">
             {windSpeed}
-            {''}kmph
+            {''}&nbsp;km/h
           </div>
           <div className="surf-row">{windDir}</div>
         </div>
@@ -156,7 +155,7 @@ function Home() {
           <div className="surf-row-container">
             <div className="surf-row-image">
               <img
-                src="/assets/waves2.jpeg"
+                src="/assets/wave-white.png"
                 alt="..."
                 className="img-thumbnail"
               />
@@ -164,7 +163,7 @@ function Home() {
             <div className="surf-col-swell">
               {' '}
               {swellHeight}
-              {''}m
+              {''}&nbsp;m
             </div>
             <div className="surf-col"> {swellDir}</div>
           </div>
@@ -183,13 +182,13 @@ function Home() {
           {/* Tide data  */}
 
           <div className="tide-row-container">
-            <div className="surf-row">
+            {/* <div className="surf-row">
               <img
                 src="/assets/waves.png"
                 alt="..."
                 className="img-thumbnail"
               />
-            </div>
+            </div> */}
             <div className="tide-row">H</div>
             <div className="tide-row-col">
               <div className="tide-col">{highTideA}</div>
@@ -206,19 +205,12 @@ function Home() {
 
         {/* Three Day Forecast  */}
 
-        {/* <div className="row-container">
-          <div className="surf-row">
-            <FaCloud />
-          </div>
-          <div className="surf-row">
-            {' '}
-            <FaCloud />
-          </div>
-          <div className="surf-row">
-            {' '}
-            <FaCloud />
-          </div>
-        </div> */}
+        <div className="row-forecast-container">
+          <div className="forecast-row-small">Tomorrow</div>
+          {/* <div className="forecast-row">{desc1}</div> */}
+          <div className="forecast-row-middle">{desc2} &nbsp;m</div>
+          <div className="forecast-row">{desc3}</div>
+        </div>
       </div>
     </>
   )
