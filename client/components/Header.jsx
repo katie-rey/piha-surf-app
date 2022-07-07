@@ -7,12 +7,16 @@ import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import { cyan } from '@mui/material/colors'
+import { FaBars } from 'react-icons/fa'
 
 export default function ButtonAppBar() {
   const primary = cyan['A200']
   return (
     <div className="header">
-      <div className="menu"></div>
+      <div className="menu">
+        {' '}
+        <FaBars />{' '}
+      </div>
       <div className="menu">Piha Surf Report</div>
       <div className="menu"></div>
     </div>

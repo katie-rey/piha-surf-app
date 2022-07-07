@@ -228,9 +228,11 @@ function Home() {
         <div className="row-forecast-container">
           <div className="forecast-row-small">Tomorrow</div>
           {/* <div className="forecast-row">{desc1}</div> */}
-          <div className="forecast-row-middle">{weatherIcon1()}</div>
-          <div className="forecast-row-middle">{desc2} &nbsp;m</div>
-          <div className="forecast-row">{desc3}</div>
+          <div className="row-forecast-container-bottom">
+            <div className="forecast-row-middle">{weatherIcon1()}</div>
+            <div className="forecast-row-middle">{desc2} &nbsp;m</div>
+            <div className="forecast-row">{desc3}</div>
+          </div>
         </div>
       </div>
     </>
