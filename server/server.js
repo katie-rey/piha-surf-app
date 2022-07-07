@@ -8,7 +8,11 @@ require('dotenv').config()
 
 const server = express()
 
-server.use(cors())
+server.use(
+  cors({
+    origin: ['http://localhost:3000'],
+  })
+)
 
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
