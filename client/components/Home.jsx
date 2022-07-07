@@ -88,12 +88,32 @@ function Home() {
   const d1 = new Date().toDateString()
   console.log(d1)
 
+  // logic for todays weather icon
+
   console.log(typeof desc)
   const descString = JSON.stringify(desc)
   console.log(typeof descString)
 
   function weatherIcon() {
     if (descString.includes('rain')) {
+      return <FaCloudShowersHeavy />
+    } else if (descString.includes('sun' && !'cloud')) {
+      return <FaSun />
+    } else if (descString.includes('cloudy' && 'sun')) {
+      return <FaCloudSun />
+    } else if (descString.includes('cloudy' && !'sun')) {
+      return <FaCloud />
+    } else return <FaCloud />
+  }
+
+  // logic for tomorrows weather icon
+
+  console.log(typeof desc)
+  const desc1String = JSON.stringify(desc1)
+  console.log(typeof descString1)
+
+  function weatherIcon1() {
+    if (desc1String.includes('rain')) {
       return <FaCloudShowersHeavy />
     } else if (descString.includes('sun' && !'cloud')) {
       return <FaSun />
@@ -208,6 +228,7 @@ function Home() {
         <div className="row-forecast-container">
           <div className="forecast-row-small">Tomorrow</div>
           {/* <div className="forecast-row">{desc1}</div> */}
+          <div className="forecast-row-middle">{weatherIcon1()}</div>
           <div className="forecast-row-middle">{desc2} &nbsp;m</div>
           <div className="forecast-row">{desc3}</div>
         </div>
