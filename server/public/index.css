@@ -7,22 +7,10 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  /* background-color: rgb(11, 23, 52); */
-
-  /* background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(28, 255, 197, 1) 0%,
-    rgba(6, 78, 166, 1) 91% */
-  /* ); */
 }
 body {
   min-height: 100vh;
   background-image: url('assets/piha.jpg');
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -32,12 +20,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   min-height: 8vh;
-  /* min-width: 100vh; */
+
   background-color: rgba(3, 23, 34, 0.9);
   margin-bottom: 5px;
-  /* position: fixed;
-  top: 0;
-} */
 }
 
 p {
@@ -52,10 +37,6 @@ p {
 
 .container {
   padding: 25px;
-  /* min-height: 50vh; */
-  /* background-color: aquamarine; */
-  /* background: rgb(2,0,36); */
-  /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(28,255,197,1) 0%, rgba(6,78,166,1) 91%); */
 }
 
 .wrapper {
@@ -63,15 +44,13 @@ p {
 }
 
 .home-container {
-  /* background-color: aqua; */
   min-height: 35vh;
 }
 
 .grid-container {
   display: flex;
   flex-direction: row;
-  /* align-items: center;
-  text-align: center; */
+
   justify-content: center;
   min-height: 40vh;
 }
@@ -82,8 +61,8 @@ p {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
-  /* background-color: beige; */
 }
+
 .row {
   font-size: 20px;
 }
@@ -94,27 +73,21 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* background-color: rgba(0, 255, 255, 0.4); */
-  /* background-color: rgba(18, 60, 74, 0.6); */
-  /* background-color: rgba(234, 220, 238, 0.6); */
+
   background-color: rgba(3, 23, 34, 0.6);
   border-radius: 15px;
-  /* padding: 15px; */
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
 }
 
 .surf-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* text-align: center; */
+
   margin-bottom: 2.25vh;
 
   padding-top: 25px;
   margin-top: 2.25vh;
-  /* background-color: rgba(0, 255, 255, 0.4); */
-  /* background-color: rgba(234, 220, 238, 0.6); */
+
   background-color: rgba(3, 23, 34, 1);
   border-radius: 15px;
 }
@@ -135,8 +108,6 @@ p {
   color: white;
 }
 .surf-row-image {
-  /* background-image: url('assets/waves2.jpeg');
-  background-size: cover; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +128,7 @@ p {
   width: 2rem;
   height: 2rem;
   background-size: cover;
-  /* transform: rotateY(180deg); */
+
   color: white;
 }
 
@@ -196,23 +167,15 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rgba(0, 255, 255, 0.4); */
-  /* background-color: rgba(18, 60, 74, 0.6); */
-  /* background-color: rgba(234, 220, 238, 0.6); */
+
   background-color: rgba(3, 23, 34, 1);
   border-radius: 15px;
-  /* padding: 15px; */
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
 }
 .row-forecast-container-bottom {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 
-  /* background-color: rgba(0, 255, 255, 0.4); */
-  /* background-color: rgba(18, 60, 74, 0.6); */
-  /* background-color: rgba(234, 220, 238, 0.6); */
   background-color: rgba(3, 23, 34, 1);
   border-radius: 15px;
   margin-left: 10px;
@@ -222,7 +185,6 @@ p {
   color: white;
   font-size: 1.2rem;
   margin: 13px;
-  /* padding-left: 20px; */
 }
 .forecast-row-middle {
   color: white;
@@ -235,7 +197,3 @@ p {
   font-size: 1rem;
   margin: 13px;
 }
-
-/* .forecast-row-text {
-  font-size: 1.2rem;
-} */
