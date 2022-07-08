@@ -15,6 +15,6 @@ This repo includes:
 * .env key config 
 * Cors implemetation
 * Axios HTTP client 
-* Deployment through Heroku 
+
 
 
