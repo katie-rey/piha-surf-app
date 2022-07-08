@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchFruits } from '../actions'
+import React from 'react'
+
 import Home from './Home'
 import Header from './Header'
 

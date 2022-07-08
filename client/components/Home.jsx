@@ -50,7 +50,7 @@ function Home() {
     axios
       .request(options)
       .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
         setDate(response.data.data.weather[0].date)
         setTemp(response.data.data.weather[0].maxtempC)
         setMinTemp(response.data.data.weather[0].mintempC)
@@ -85,14 +85,13 @@ function Home() {
       })
   }, [])
 
+  // logic for todays date
+
   const d1 = new Date().toDateString()
-  console.log(d1)
 
   // logic for todays weather icon
 
-  console.log(typeof desc)
   const descString = JSON.stringify(desc)
-  console.log(typeof descString)
 
   function weatherIcon() {
     if (descString.includes('rain')) {
@@ -108,9 +107,7 @@ function Home() {
 
   // logic for tomorrows weather icon
 
-  console.log(typeof desc)
   const desc1String = JSON.stringify(desc1)
-  console.log(typeof descString1)
 
   function weatherIcon1() {
     if (desc1String.includes('rain')) {
@@ -126,6 +123,8 @@ function Home() {
 
   return (
     <>
+      {/* Master data  */}
+
       <div className="top-container">
         <Grid container spacing={2}>
           <Grid item xs={2}>
@@ -187,28 +186,10 @@ function Home() {
             </div>
             <div className="surf-col"> {swellDir}</div>
           </div>
-          {/* <div className="surf-row-container">
-            <div className="surf-row">
-              <FaWater />
-            </div>
-            <div className="surf-row">{waterTemp}℃</div>
-
-            <div className="surf-row">
-              <FaCloudRain />
-            </div>
-            <div className="surf-row">{precip}mm</div>
-          </div> */}
 
           {/* Tide data  */}
 
           <div className="tide-row-container">
-            {/* <div className="surf-row">
-              <img
-                src="/assets/waves.png"
-                alt="..."
-                className="img-thumbnail"
-              />
-            </div> */}
             <div className="tide-row">H</div>
             <div className="tide-row-col">
               <div className="tide-col">{highTideA}</div>
@@ -227,7 +208,6 @@ function Home() {
 
         <div className="row-forecast-container">
           <div className="forecast-row-small">Tomorrow</div>
-          {/* <div className="forecast-row">{desc1}</div> */}
           <div className="row-forecast-container-bottom">
             <div className="forecast-row-middle">{weatherIcon1()}</div>
             <div className="forecast-row-middle">{desc2} &nbsp;m</div>
@@ -240,15 +220,3 @@ function Home() {
 }
 
 export default Home
-
-// <div className="surf-row-container">
-//             <div className="surf-row">
-//               <FaWater />
-//             </div>
-//             <div className="surf-row">{waterTemp}℃</div>
-
-//             <div className="surf-row">
-//               {/* <FontAwesomeIcon icon={fa-water-arrow-down} /> */}
-//             </div>
-//             <div className="surf-row">{precip}mm</div>
-//           </div>
