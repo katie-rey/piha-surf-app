@@ -1,4 +1,4 @@
-## A react app using external API to depict the surf conditions in Piha 
+## A react app, requesting an external API to depict the surf conditions in Piha 
 
 
 ![Screen Shot 2022-07-08 at 2 57 10 PM](https://user-images.githubusercontent.com/96268293/177908710-64165ad0-eaf8-4010-af11-4db548a2c55b.png)
