@@ -1,29 +1,20 @@
-# Fullstack boilerplate
+## A react app using external API to depict the surf conditions in Piha 
 
-## Getting Started
 
-### From the Github UI
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
+![Screen Shot 2022-07-08 at 2 57 10 PM](https://user-images.githubusercontent.com/96268293/177908710-64165ad0-eaf8-4010-af11-4db548a2c55b.png)
 
-### From the command line
 
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
 
-You can find the server running on [http://localhost:3000](http://localhost:3000).
-
-## Details
+### Details
 
 This repo includes:
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Jest and testing library
-* configuration for server-side debugging in VS Code
-* a single client-side test (`client/components/App.test.js`)
+
+* A React app
+* An external API request
+* .env key config 
+* Cors implemetation
+* Axios HTTP client 
+* Deployment through Heroku 
+
+
